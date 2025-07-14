@@ -157,10 +157,6 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
 
   return (
     <div className="p-3 bg-gray-50 border-t border-gray-200">
-      <div className="flex items-center gap-2 mb-2">
-        <span className="text-sm font-medium text-gray-700">Quick Research:</span>
-      </div>
-      
       <div className="grid grid-cols-4 gap-3">
         {commands.map((command) => {
           const Icon = command.icon;
