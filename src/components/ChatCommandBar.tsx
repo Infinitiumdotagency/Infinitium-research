@@ -167,19 +167,16 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
               onClick={() => handleCommandClick(command)}
               disabled={disabled}
               className={`
-                flex flex-col items-center gap-1 p-3 rounded-lg border transition-all duration-200 transform
+                flex flex-col items-center gap-0.5 p-1.5 rounded-md border transition-all duration-200 transform
                 ${disabled 
                   ? 'opacity-50 cursor-not-allowed bg-gray-100 border-gray-200' 
                   : `${command.bgColor} ${command.borderColor} ${command.hoverColor} hover:scale-105 active:scale-95`
                 }
               `}
             >
-              <Icon size={20} className={disabled ? 'text-gray-400' : command.color} />
+              <Icon size={12} className={disabled ? 'text-gray-400' : command.color} />
               <span className={`text-xs font-medium ${disabled ? 'text-gray-400' : command.color}`}>
                 {command.label}
-              </span>
-              <span className="text-xs text-gray-500 text-center leading-tight">
-                {command.description}
               </span>
             </button>
           );
