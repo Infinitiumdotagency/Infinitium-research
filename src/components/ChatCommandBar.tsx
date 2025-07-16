@@ -20,40 +20,40 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
       icon: Search,
       label: 'Research',
       description: 'Deep AI investigation',
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-      hoverColor: 'hover:bg-blue-100',
-      borderColor: 'border-blue-200'
+      color: 'text-blue-800',
+      bgColor: 'bg-blue-600',
+      hoverColor: 'hover:bg-blue-700',
+      borderColor: 'border-blue-800'
     },
     {
       id: 'quick',
       icon: Zap,
       label: 'Quick',
       description: 'Fast overview',
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      hoverColor: 'hover:bg-green-100',
-      borderColor: 'border-green-200'
+      color: 'text-green-800',
+      bgColor: 'bg-green-600',
+      hoverColor: 'hover:bg-green-700',
+      borderColor: 'border-green-800'
     },
     {
       id: 'compare',
       icon: Scale,
       label: 'Compare',
       description: 'Side-by-side analysis',
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      hoverColor: 'hover:bg-purple-100',
-      borderColor: 'border-purple-200'
+      color: 'text-purple-800',
+      bgColor: 'bg-purple-600',
+      hoverColor: 'hover:bg-purple-700',
+      borderColor: 'border-purple-800'
     },
     {
       id: 'timeline',
       icon: Calendar,
       label: 'Timeline',
       description: 'Historical progression',
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
-      hoverColor: 'hover:bg-orange-100',
-      borderColor: 'border-orange-200'
+      color: 'text-orange-800',
+      bgColor: 'bg-orange-600',
+      hoverColor: 'hover:bg-orange-700',
+      borderColor: 'border-orange-800'
     }
   ];
 
@@ -171,12 +171,12 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
                 flex flex-col items-center gap-0.5 p-1 rounded border transition-all duration-200 transform
                 ${disabled 
                   ? 'opacity-50 cursor-not-allowed bg-gray-100 border-gray-200' 
-                  : `${command.bgColor} ${command.borderColor} ${command.hoverColor} hover:scale-105 active:scale-95`
+                  : `${command.bgColor} ${command.borderColor} ${command.hoverColor} hover:scale-105 active:scale-95 text-white`
                 }
               `}
             >
-              <Icon size={10} className={disabled ? 'text-gray-400' : command.color} />
-              <span className={`text-xs font-medium ${disabled ? 'text-gray-400' : command.color}`}>
+              <Icon size={5} className={disabled ? 'text-gray-400' : 'text-white'} />
+              <span className={`text-[7px] font-medium ${disabled ? 'text-gray-400' : 'text-white'}`}>
                 {command.label}
               </span>
             </button>
