@@ -43,7 +43,7 @@ export const Chatbot: React.FC = () => {
     // Add welcome message
     const welcomeMessage: Message = {
       id: '1',
-      content: "Hello! I'm your AI assistant with advanced research capabilities. I can conduct deep research, web searches, and provide comprehensive analysis.\n\nTry research commands like:\n• `/research [topic]` for deep investigation\n• `/quick [topic]` for fast overview\n• `/compare [A] vs [B]` for comparisons\n• `/timeline [topic]` for historical analysis\n\nHow can I help you today?",
+      content: "Hello! I'm your AI assistant with advanced research capabilities. I can conduct deep research, web searches, and provide comprehensive analysis.\n\nHow can I help you today?",
       role: 'assistant',
       timestamp: new Date(),
     };
