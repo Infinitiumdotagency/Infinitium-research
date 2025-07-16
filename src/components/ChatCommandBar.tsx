@@ -96,7 +96,7 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
         <div className={`p-4 rounded-lg border-2 ${activeCmd?.borderColor} ${activeCmd?.bgColor}`}>
           <div className="flex items-center gap-2 mb-3">
             <Icon size={5} className={disabled ? 'text-gray-400' : command.color} />
-            <span className={`text-[8px] font-medium ${disabled ? 'text-gray-400' : command.color}`}>
+            <span className={`text-[7px] font-medium ${disabled ? 'text-gray-400' : command.color}`}>
               {activeCmd?.label} Research
             </span>
             <span className="text-sm text-gray-500">- {activeCmd?.description}</span>
