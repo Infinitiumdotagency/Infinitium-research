@@ -291,10 +291,10 @@ export const Chatbot: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
+    <div className="flex flex-col h-screen bg-white">
       {/* Animated Progress Tracker */}
       {(isAgentResearching || activeResearchCommand) && researchStages.length > 0 && (
-        <div className="p-4 bg-gray-50">
+        <div className="p-4 bg-white">
           <AnimatedProgressTracker
             stages={researchStages}
             title="AI Agent Research Progress"
