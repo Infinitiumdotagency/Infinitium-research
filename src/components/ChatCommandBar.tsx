@@ -92,7 +92,6 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
         <div className={`p-4 rounded-lg border-2 ${activeCmd?.borderColor} ${activeCmd?.bgColor}`}>
           <div className="flex items-center gap-2 mb-3">
             {activeCmd && <activeCmd.icon size={16} className="text-white" />}
-            <span className={`text-[7px] font-medium ${disabled ? 'text-gray-400' : command.color}`}>
             <span className={`text-[7px] font-medium ${disabled ? 'text-gray-400' : 'text-white'}`}>
               {activeCmd?.label} Research
             </span>
@@ -164,7 +163,6 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
               onClick={() => handleCommandClick(command)}
               disabled={disabled}
               className={`
-                flex flex-col items-center gap-0.5 p-1.5 rounded-md border transition-all duration-200 transform
                 flex flex-col items-center gap-0.5 p-1 rounded border transition-all duration-200 transform
                 ${disabled 
                   ? 'opacity-50 cursor-not-allowed bg-gray-100 border-gray-200' 
