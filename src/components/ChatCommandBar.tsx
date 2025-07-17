@@ -95,7 +95,7 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
             <span className={`text-[7px] font-medium ${disabled ? 'text-gray-400' : command.color}`}>
               {activeCmd?.label} Research
             </span>
-            <span className="text-sm text-gray-500">- {activeCmd?.description}</span>
+            <span className="text-xs text-white opacity-80">- {activeCmd?.description}</span>
           </div>
           
           <div className="space-y-3">
@@ -138,7 +138,7 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
                 disabled={!selectedTopic.trim()}
                 className={`flex-1 px-3 py-2 text-white rounded-lg transition-colors text-sm ${
                   selectedTopic.trim()
-                    ? `${activeCmd?.bgColor.replace('bg-', 'bg-').replace('-50', '-500')} hover:${activeCmd?.bgColor.replace('bg-', 'bg-').replace('-50', '-600')}`
+                    ? `${activeCmd?.bgColor} ${activeCmd?.hoverColor}`
                     : 'bg-gray-300 cursor-not-allowed'
                 }`}
               >
