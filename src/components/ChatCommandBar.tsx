@@ -20,7 +20,6 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
       icon: Search,
       label: 'Research',
       description: 'Deep AI investigation',
-      color: 'text-blue-800',
       bgColor: 'bg-blue-600',
       hoverColor: 'hover:bg-blue-700',
       borderColor: 'border-blue-800'
@@ -30,7 +29,6 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
       icon: Zap,
       label: 'Quick',
       description: 'Fast overview',
-      color: 'text-green-800',
       bgColor: 'bg-green-600',
       hoverColor: 'hover:bg-green-700',
       borderColor: 'border-green-800'
@@ -40,7 +38,6 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
       icon: Scale,
       label: 'Compare',
       description: 'Side-by-side analysis',
-      color: 'text-purple-800',
       bgColor: 'bg-purple-600',
       hoverColor: 'hover:bg-purple-700',
       borderColor: 'border-purple-800'
@@ -50,7 +47,6 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
       icon: Calendar,
       label: 'Timeline',
       description: 'Historical progression',
-      color: 'text-orange-800',
       bgColor: 'bg-orange-600',
       hoverColor: 'hover:bg-orange-700',
       borderColor: 'border-orange-800'
@@ -95,7 +91,7 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
       <div className="p-3 bg-white border-t border-gray-200">
         <div className={`p-4 rounded-lg border-2 ${activeCmd?.borderColor} ${activeCmd?.bgColor}`}>
           <div className="flex items-center gap-2 mb-3">
-            <Icon size={5} className={disabled ? 'text-gray-400' : command.color} />
+            <Icon size={16} className={disabled ? 'text-gray-400' : 'text-white'} />
             <span className={`text-[7px] font-medium ${disabled ? 'text-gray-400' : command.color}`}>
               {activeCmd?.label} Research
             </span>
