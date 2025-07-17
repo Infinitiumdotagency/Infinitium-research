@@ -170,10 +170,12 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
                 }
               `}
             >
-              <Icon size={5} className={disabled ? 'text-gray-400' : 'text-white'} />
+            <div className="flex items-center gap-1">
+              <Icon size={12} className={disabled ? 'text-gray-400' : 'text-white'} />
               <span className={`text-[7px] font-medium ${disabled ? 'text-gray-400' : 'text-white'}`}>
                 {command.label}
               </span>
+            </div>
             </button>
           );
         })}
