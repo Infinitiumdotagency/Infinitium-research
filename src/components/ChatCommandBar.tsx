@@ -29,27 +29,27 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
       icon: Zap,
       label: 'Quick',
       description: 'Fast overview',
-      bgColor: 'bg-green-600',
-      hoverColor: 'hover:bg-green-700',
-      borderColor: 'border-green-800'
+      bgColor: 'bg-blue-600',
+      hoverColor: 'hover:bg-blue-700',
+      borderColor: 'border-blue-800'
     },
     {
       id: 'compare',
       icon: Scale,
       label: 'Compare',
       description: 'Side-by-side analysis',
-      bgColor: 'bg-purple-600',
-      hoverColor: 'hover:bg-purple-700',
-      borderColor: 'border-purple-800'
+      bgColor: 'bg-blue-600',
+      hoverColor: 'hover:bg-blue-700',
+      borderColor: 'border-blue-800'
     },
     {
       id: 'timeline',
       icon: Calendar,
       label: 'Timeline',
       description: 'Historical progression',
-      bgColor: 'bg-orange-600',
-      hoverColor: 'hover:bg-orange-700',
-      borderColor: 'border-orange-800'
+      bgColor: 'bg-blue-600',
+      hoverColor: 'hover:bg-blue-700',
+      borderColor: 'border-blue-800'
     }
   ];
 
