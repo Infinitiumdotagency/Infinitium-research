@@ -120,9 +120,9 @@ export const ResearchTopicModal: React.FC<ResearchTopicModalProps> = ({
               <button
                 type="submit"
                 disabled={!topic.trim()}
-                className={`flex-1 px-4 py-3 text-white rounded-lg transition-all duration-200 text-sm font-medium ${
+                className={`flex-1 px-4 py-2 text-white rounded-lg transition-colors ${
                   topic.trim()
-                    ? 'bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 shadow-lg hover:shadow-xl transform hover:scale-105'
+                    ? 'bg-blue-600 hover:bg-blue-700'
                     : 'bg-gray-300 cursor-not-allowed'
                 }`}
               >
