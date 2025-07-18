@@ -152,7 +152,7 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
   }
 
   return (
-    <div className="p-3 bg-white border-t border-gray-200">
+    <div className="p-2 sm:p-3 bg-white border-t border-gray-200">
       <div className="grid grid-cols-4 gap-3">
         {commands.map((command) => {
           const Icon = command.icon;
@@ -163,19 +163,17 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
               onClick={() => handleCommandClick(command)}
               disabled={disabled}
               className={`
-                flex flex-col items-center gap-0.5 p-1 rounded border transition-all duration-200 transform
+                flex items-center justify-center gap-1 p-2 sm:p-3 rounded transition-all duration-200 transform min-h-[44px]
                 ${disabled 
                   ? 'opacity-50 cursor-not-allowed bg-gray-100 border-gray-200' 
                   : `${command.bgColor} ${command.borderColor} ${command.hoverColor} hover:scale-105 active:scale-95 text-white`
                 }
               `}
             >
-            <div className="flex items-center gap-1">
-              <Icon size={12} className={disabled ? 'text-gray-400' : 'text-white'} />
-              <span className={`text-[7px] font-medium ${disabled ? 'text-gray-400' : 'text-white'}`}>
+              <Icon size={14} className={disabled ? 'text-gray-400' : 'text-white'} />
+              <span className={`text-xs sm:text-sm font-medium ${disabled ? 'text-gray-400' : 'text-white'} hidden sm:inline`}>
                 {command.label}
               </span>
-            </div>
             </button>
           );
         })}

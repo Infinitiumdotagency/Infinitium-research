@@ -10,7 +10,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
   const isUser = message.role === 'user';
   
   return (
-    <div className={`flex items-start gap-3 p-4 ${isUser ? 'flex-row-reverse' : ''}`}>
+    <div className={`flex items-start gap-2 sm:gap-3 p-3 sm:p-4 ${isUser ? 'flex-row-reverse' : ''}`}>
       <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
         isUser ? 'bg-blue-500 text-white' : 
         message.isResearchReport ? 'bg-purple-100 text-purple-600' :
@@ -24,7 +24,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
       </div>
       
       <div className={`flex-1 ${isUser ? 'text-right' : ''}`}>
-        <div className={`inline-block max-w-xs sm:max-w-md lg:max-w-2xl xl:max-w-4xl rounded-2xl px-4 py-2 ${
+        <div className={`inline-block max-w-[85%] sm:max-w-md lg:max-w-2xl xl:max-w-4xl rounded-2xl px-3 sm:px-4 py-2 sm:py-3 ${
           isUser 
             ? 'bg-blue-500 text-white rounded-br-md' 
             : message.isResearchReport 
@@ -32,7 +32,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
               : 'bg-gray-100 text-gray-800 rounded-bl-md'
         }`}>
           {message.isResearchReport ? (
-            <div className="prose prose-sm max-w-none">
+            <div className="prose prose-sm sm:prose max-w-none">
               <div dangerouslySetInnerHTML={{ 
                 __html: message.content
                   .replace(/^# /gm, '<h1 class="text-lg font-bold mb-2">')
@@ -43,7 +43,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
               }} />
             </div>
           ) : (
-            <p className="whitespace-pre-wrap break-words">{message.content}</p>
+            <p className="whitespace-pre-wrap break-words text-sm sm:text-base">{message.content}</p>
           )}
         </div>
         

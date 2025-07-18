@@ -129,13 +129,13 @@ export const AgentProgress: React.FC<AgentProgressProps> = ({
   const styles = getStageStyles(stage);
 
   return (
-    <div className="flex items-start gap-3 p-4">
+    <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4">
       <div className={`flex-shrink-0 w-8 h-8 rounded-full ${styles.bg} ${styles.text} flex items-center justify-center`}>
         {getStageIcon(stage)}
       </div>
       
       <div className="flex-1">
-        <div className={`${styles.bgCard} border ${styles.border} rounded-2xl rounded-bl-md px-4 py-3`}>
+        <div className={`${styles.bgCard} border ${styles.border} rounded-2xl rounded-bl-md px-3 sm:px-4 py-2 sm:py-3`}>
           <div className="flex items-center gap-2 mb-2">
             <Users size={14} className={styles.text} />
             <span className={`text-sm font-semibold ${styles.textTitle}`}>
@@ -146,18 +146,18 @@ export const AgentProgress: React.FC<AgentProgressProps> = ({
             </span>
           </div>
           
-          <p className={`text-sm ${styles.textCard} mb-3`}>
+          <p className={`text-xs sm:text-sm ${styles.textCard} mb-2 sm:mb-3`}>
             {message}
           </p>
           
           {agentsActive.length > 0 && (
-            <div className={`border-t ${styles.border} pt-2`}>
+            <div className={`border-t ${styles.border} pt-1 sm:pt-2`}>
               <div className="flex items-center gap-2 flex-wrap">
-                <span className={`text-xs ${styles.text}`}>Active Agents:</span>
+                <span className={`text-xs ${styles.text} hidden sm:inline`}>Active:</span>
                 {agentsActive.map((agent, index) => (
                   <span 
                     key={index}
-                    className={`text-xs ${styles.bgBadge} ${styles.textCard} px-2 py-1 rounded-full`}
+                    className={`text-xs ${styles.bgBadge} ${styles.textCard} px-1 sm:px-2 py-1 rounded-full`}
                   >
                     {agent}
                   </span>

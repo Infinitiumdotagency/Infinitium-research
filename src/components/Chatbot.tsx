@@ -291,18 +291,18 @@ export const Chatbot: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-white">
+    <div className="flex flex-col h-screen bg-white overflow-hidden">
       {/* Header */}
-      <div className="bg-blue-600 text-white p-4 shadow-lg">
+      <div className="bg-blue-600 text-white p-3 sm:p-4 shadow-lg flex-shrink-0">
         <div className="flex items-center gap-3">
-          <div className="text-2xl font-bold">∞</div>
-          <h1 className="text-xl font-bold">Infinitium Research</h1>
+          <div className="text-xl sm:text-2xl font-bold">∞</div>
+          <h1 className="text-lg sm:text-xl font-bold">Infinitium Research</h1>
         </div>
       </div>
       
       {/* Animated Progress Tracker */}
       {(isAgentResearching || activeResearchCommand) && researchStages.length > 0 && (
-        <div className="p-4 bg-white">
+        <div className="p-3 sm:p-4 bg-white flex-shrink-0">
           <AnimatedProgressTracker
             stages={researchStages}
             title="AI Agent Research Progress"
@@ -312,7 +312,7 @@ export const Chatbot: React.FC = () => {
       )}
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto overscroll-behavior-contain">
         {messages.map((message) => (
           <ChatMessage key={message.id} message={message} />
         ))}

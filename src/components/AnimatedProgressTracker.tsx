@@ -20,22 +20,22 @@ export const AnimatedProgressTracker: React.FC<AnimatedProgressTrackerProps> = (
   const currentStage = stages.find(stage => stage.status === 'active');
   
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+    <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 shadow-sm">
       {/* Header */}
-      <div className="mb-6">
+      <div className="mb-4 sm:mb-6">
         <div className="flex items-center justify-between mb-2">
-          <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+          <h3 className="text-base sm:text-lg font-semibold text-gray-800">{title}</h3>
           <span className="text-sm text-gray-500">
             {completedStages}/{totalStages} completed
           </span>
         </div>
         
         {subtitle && (
-          <p className="text-sm text-gray-600 mb-3">{subtitle}</p>
+          <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">{subtitle}</p>
         )}
         
         {/* Overall Progress Bar */}
-        <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+        <div className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2 overflow-hidden">
           <div 
             className="h-full bg-gradient-to-r from-blue-500 to-green-500 transition-all duration-1000 ease-out"
             style={{ width: `${progressPercentage}%` }}
@@ -51,10 +51,10 @@ export const AnimatedProgressTracker: React.FC<AnimatedProgressTrackerProps> = (
       
       {/* Current Stage Info */}
       {currentStage && (
-        <div className="mb-6 p-3 bg-blue-50 rounded-lg border border-blue-200">
+        <div className="mb-4 sm:mb-6 p-2 sm:p-3 bg-blue-50 rounded-lg border border-blue-200">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-            <span className="text-sm font-medium text-blue-800">
+            <span className="text-xs sm:text-sm font-medium text-blue-800">
               Currently: {currentStage.label}
             </span>
           </div>
@@ -62,7 +62,7 @@ export const AnimatedProgressTracker: React.FC<AnimatedProgressTrackerProps> = (
       )}
       
       {/* Stage Indicators */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between overflow-x-auto pb-2">
         {stages.map((stage, index) => (
           <ResearchStageIndicator
             key={stage.id}
@@ -75,10 +75,10 @@ export const AnimatedProgressTracker: React.FC<AnimatedProgressTrackerProps> = (
       
       {/* Completion Celebration */}
       {progressPercentage === 100 && (
-        <div className="mt-6 p-4 bg-green-50 rounded-lg border border-green-200 text-center">
+        <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-green-50 rounded-lg border border-green-200 text-center">
           <div className="text-2xl mb-2">🎉</div>
-          <p className="text-green-800 font-medium">Research Completed Successfully!</p>
-          <p className="text-green-600 text-sm">All stages finished with high quality results.</p>
+          <p className="text-sm sm:text-base text-green-800 font-medium">Research Completed Successfully!</p>
+          <p className="text-green-600 text-xs sm:text-sm">All stages finished with high quality results.</p>
         </div>
       )}
     </div>
