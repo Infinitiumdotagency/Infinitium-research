@@ -292,6 +292,14 @@ export const Chatbot: React.FC = () => {
 
   return (
     <div className="flex flex-col h-screen bg-white">
+      {/* Header */}
+      <div className="bg-blue-600 text-white p-4 shadow-lg">
+        <div className="flex items-center gap-3">
+          <div className="text-2xl font-bold">∞</div>
+          <h1 className="text-xl font-bold">Infinitium Research</h1>
+        </div>
+      </div>
+      
       {/* Animated Progress Tracker */}
       {(isAgentResearching || activeResearchCommand) && researchStages.length > 0 && (
         <div className="p-4 bg-white">

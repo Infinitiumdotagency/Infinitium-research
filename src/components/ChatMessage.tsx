@@ -14,13 +14,13 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
       <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
         isUser ? 'bg-blue-500 text-white' : 
         message.isResearchReport ? 'bg-purple-100 text-purple-600' :
-        message.hasWebResults ? 'bg-green-100 text-green-600' : 
-        'bg-gray-200 text-gray-600'
+        message.hasWebResults ? 'bg-blue-600 text-white' : 
+        'bg-blue-600 text-white'
       }`}>
         {isUser ? <User size={16} /> : 
          message.isResearchReport ? <Search size={16} /> :
-         message.hasWebResults ? <Globe size={16} /> : 
-         <Bot size={16} />}
+         message.hasWebResults ? <span className="text-sm font-bold">∞</span> : 
+         <span className="text-sm font-bold">∞</span>}
       </div>
       
       <div className={`flex-1 ${isUser ? 'text-right' : ''}`}>
