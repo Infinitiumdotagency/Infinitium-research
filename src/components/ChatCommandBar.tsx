@@ -111,10 +111,10 @@ export const ChatCommandBar: React.FC<ChatCommandBarProps> = ({
             
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <Sparkles size={14} className="text-yellow-500" />
-              <span>Quick suggestions:</span>
+          <div className="flex justify-center gap-3">
             </div>
             
-            <div className="flex flex-wrap gap-2">
+                    flex items-center justify-center gap-1 p-2 sm:p-3 rounded transition-all duration-200 transform min-h-[44px] w-12 sm:w-16
               {suggestions.slice(0, 3).map((suggestion, index) => (
                 <button
                   key={index}
